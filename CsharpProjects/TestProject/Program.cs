@@ -4,24 +4,24 @@ int discountPercentage = 0;
 
 // Your code goes here
 
-int total = daysUntilExpiration + discountPercentage;
+int total = daysUntilExpiration;
 
-Console.WriteLine($"Dice roll:  {total}");
-
-
-if (total >= 12)
+if (total <= 12)
 {
-    Console.WriteLine("You win a new car!");
+    Console.WriteLine("Your subscription will expire soon. Renew now!");
 }
-else if (total >= 10)
+else if (total <= 5)
 {
-    Console.WriteLine("You win a new laptop!");
+    Console.WriteLine($"Your subscription expires in {daysUntilExpiration} days .
+Renew now and save 10%!");
 }
-else if (total == 7)
+else if (total <= 1)
 {
-    Console.WriteLine("You win a trip for two!");
+    Console.WriteLine($" Your subscription expires within a day!
+Renew now and save 20%!");
 }
-else
+else if ( total === 0 )
 {
-    Console.WriteLine("You win a kitten!");
+    Console.WriteLine("Your subscription has expired.   ");
+    
 }
